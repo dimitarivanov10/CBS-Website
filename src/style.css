@@ -478,6 +478,50 @@ header {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
 }
 
+/* computer network part */
+.cn-bg-image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.95);
+}
+
+.cn-overlay-text {
+  background: rgba(253, 244, 244, 0.2);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 12px;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.cn-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 1rem 2rem;
+  color: #f9f9f9;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4), 0px 4px 6px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 0.3s ease-in-out;
+}
+
+.cn-title:hover {
+  transform: scale(1.02);
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5), 0px 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.cn-subtitle {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-left: 10rem;
+  margin-right: 10rem;
+  color: #f8f9f9;
+  text-shadow: 0.5px 0.5px 0.5px #0f172a;
+}
 /* Responsive for mobile */
 @media (max-width: 768px) {
   .contacts-wrapper {
