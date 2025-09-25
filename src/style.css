@@ -523,33 +523,41 @@ header {
   text-shadow: 0.5px 0.5px 0.5px #0f172a;
 }
 
-.cn-check-wrapper {
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(350px, 1fr));
+  gap: 2rem;
+  margin: 3rem;
+}
+
+.tip-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: flex-start;
-  gap: 20px;
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  width: calc(100% - 40px);
-  margin: 20px;
-  padding: 30px;
-  min-height: 250px;
-  color: #333;
+  gap: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.cn-check-wrapper img {
-  width: 200px;
-  height: auto;
-  border-radius: 8px;
+.tip-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.tip-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
   flex-shrink: 0;
+  filter: drop-shadow(0px 0px 6px rgba(177, 47, 49, 0.5));
 }
 
-.cn-check-wrapper .cn-subtitle {
-  font-size: 28px;
-  color: #1e293b;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4), 0px 2px 4px rgba(0, 0, 0, 0.2);
-  line-height: 1.5;
-  margin: 3;
+.tip-card p {
+  font-size: 1.2rem;
+  color: #2d2f30;
+  line-height: 1.6;
 }
 
 /* Responsive for mobile */
