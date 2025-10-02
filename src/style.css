@@ -84,7 +84,7 @@ header {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: #dedcd7;
+  /* background-color: #dedcd7; */
   overflow: hidden;
 }
 
@@ -558,6 +558,32 @@ header {
   font-size: 1.2rem;
   color: #2d2f30;
   line-height: 1.6;
+}
+
+/* video surveillance */
+.video-section {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* or custom height */
+  overflow: hidden;
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+  z-index: -1;
+}
+
+#home-page {
+  position: relative; /* keeps content above video */
+  margin: 0; /* remove the side gaps */
+  border-radius: 0; /* no more rounded corners */
+  background: transparent; /* don’t overlay gray */
 }
 
 /* Responsive for mobile */
