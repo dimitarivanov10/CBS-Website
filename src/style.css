@@ -563,14 +563,19 @@ header {
 /* video surveillance */
 .video-section {
   position: relative;
-  height: 100vh; /* full screen each */
+  height: 100vh;
   overflow: hidden;
+
+  display: flex;
+  justify-content: center;   /* center glass horizontally */
+  align-items: flex-start;   /* start from top */
 }
+
+
 
 .video-background {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -578,15 +583,17 @@ header {
   filter: brightness(0.7);
 }
 
-  .video-section .cn-overlay-text {
-  position: relative;
-  z-index: 1;
-  color: white;
+
+.video-section .cn-overlay-text {
+  margin-top: 6rem;          /* space from top of video */
+
+  width: 95%;
+
   text-align: center;
-  top: 50%;
-  /* transform: translateY(-50%); */
-  overflow: hidden;
 }
+
+
+
 
 
 /* Responsive for mobile */
