@@ -561,61 +561,65 @@ header {
 }
 
 /* video surveillance */
-.video-section-1, .video-section-2 {
+
+#video-surveillance {
   position: relative;
-  height: 100vh;
+  margin: 1rem;
+  padding: 6rem 2rem;
+  border-radius: 8px;
   overflow: hidden;
-
-  display: flex;
-  justify-content: center;   /* center glass horizontally */
-  align-items: flex-start;   /* start from top */
+  background-color: #dedcd7;
 }
 
-.video-section-2 .tips-grid{
-  grid-template-columns: repeat(1, minmax(260px, 1fr));
-  gap: 1.5rem;
-  margin: 2rem 0;
-}
-
-.video-section-2 .tip-card {
-  background: rgba(253, 244, 244, 0.18); /* glass */
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-
-  border-radius: 14px;
-  padding: 1.5rem;
-
-  box-shadow:
-    0 8px 24px rgba(0, 0, 0, 0.25);
-
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-  border: 1px solid rgba(0, 255, 255, 0.35);
-
-  box-shadow:
-    0 8px 24px rgba(0, 0, 0, 0.25),
-    0 0 12px rgba(0, 255, 255, 0.25);
-}
-
-
-.video-background {
-  position: absolute;
-  inset: 0;
+.cn-bg-video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  z-index: -1;
+  object-fit: cover;      /* behaves like your images */
+  display: block;
   filter: brightness(0.7);
 }
 
-
-.video-section-1 .cn-overlay-text{
-  margin-bottom: 2rem;          /* space from top of video */
-
-  width: 95%;
-
-  text-align: center;
+.image-wrapper {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 1;
 }
+.cn-overlay-text {
+  /* glass background */
+  background: rgba(253, 244, 244, 0.15); /* 👈 change this value */
+
+  /* glass blur */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  /* shape & spacing */
+  border-radius: 16px;
+  padding: 2rem;
+
+  /* subtle glass edge */
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  /* depth */
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.25),
+    0 0 12px rgba(0, 255, 255, 0.25);
+
+  position: relative;
+  z-index: 1;
+}
+
+#video-surveillance .cn-overlay-text {
+  width: 100%;
+  max-width: 95vw;
+  border-radius: 16px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+
+
 
 
 
