@@ -585,6 +585,7 @@ header {
   overflow: hidden;
   z-index: 1;
 }
+
 .cn-overlay-text {
   /* glass background */
   background: rgba(253, 244, 244, 0.15); /* 👈 change this value */
@@ -615,10 +616,40 @@ header {
   border-radius: 16px;
   margin: 0 auto;
   position: relative;
-  z-index: 2;
+  padding: 2rem 2rem 0 2rem;
+  z-index: 3;
+  overflow: visible;
 }
 
+/* Video surveillance cards wrapper */
+#video-surveillance .video-cards-wrapper {
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  gap: 1.5rem; /* spacing between cards */
+  width: 100%;
+  max-width: 95vw; /* same as overlay text */
+  margin: 2rem auto 0 auto; /* top margin + center horizontally */
+}
 
+/* Individual cards */
+.video-card {
+  background: rgba(255, 255, 255, 0.15); /* glass effect */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  color: #0f172a;
+  font-size: 1.2rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 4;
+}
+
+.video-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+}
 
 
 
