@@ -565,10 +565,10 @@ header {
 #video-surveillance {
   position: relative;
   margin: 1rem;
-  padding: 6rem 2rem;
   border-radius: 8px;
   overflow: hidden;
   background-color: #dedcd7;
+  padding: 6rem 2rem;
 }
 
 .cn-bg-video {
@@ -583,31 +583,21 @@ header {
   position: absolute;
   inset: 0;
   overflow: hidden;
-  z-index: 1;
+  z-index: 0;
 }
 
 .cn-overlay-text {
-  /* glass background */
-  background: rgba(253, 244, 244, 0.15); /* 👈 change this value */
-
-  /* glass blur */
+  background: rgba(253, 244, 244, 0.15); 
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-
-  /* shape & spacing */
   border-radius: 16px;
   padding: 2rem;
-
-  /* subtle glass edge */
   border: 1px solid rgba(255, 255, 255, 0.35);
-
-  /* depth */
   box-shadow:
     0 8px 24px rgba(0, 0, 0, 0.25),
     0 0 12px rgba(0, 255, 255, 0.25);
-
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 #video-surveillance .cn-overlay-text {
@@ -616,7 +606,7 @@ header {
   border-radius: 16px;
   margin: 0 auto;
   position: relative;
-  padding: 2rem 2rem 0 2rem;
+  padding: 2rem 2rem 2rem 2rem;
   z-index: 3;
   overflow: visible;
 }
@@ -629,6 +619,7 @@ header {
   width: 100%;
   max-width: 95vw; /* same as overlay text */
   margin: 2rem auto 0 auto; /* top margin + center horizontally */
+  z-index: 2;
 }
 
 /* Individual cards */
