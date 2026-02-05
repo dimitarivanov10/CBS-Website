@@ -561,7 +561,7 @@ header {
 }
 
 /* video surveillance */
-.video-section {
+.video-section-1, .video-section-2 {
   position: relative;
   height: 100vh;
   overflow: hidden;
@@ -571,6 +571,31 @@ header {
   align-items: flex-start;   /* start from top */
 }
 
+.video-section-2 .tips-grid{
+  grid-template-columns: repeat(1, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.video-section-2 .tip-card {
+  background: rgba(253, 244, 244, 0.18); /* glass */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  border-radius: 14px;
+  padding: 1.5rem;
+
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.25);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  border: 1px solid rgba(0, 255, 255, 0.35);
+
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.25),
+    0 0 12px rgba(0, 255, 255, 0.25);
+}
 
 
 .video-background {
@@ -584,8 +609,8 @@ header {
 }
 
 
-.video-section .cn-overlay-text {
-  margin-top: 6rem;          /* space from top of video */
+.video-section-1 .cn-overlay-text{
+  margin-bottom: 2rem;          /* space from top of video */
 
   width: 95%;
 
