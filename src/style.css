@@ -793,56 +793,60 @@ header {
 /* hardware repair new style */
 .hardware-tips-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  padding: 3rem 2rem;
-  justify-items: center;
+  margin: 3rem;
 }
 
 .hardware-tip-box {
-  background: #0ff; /* циан */
-  background: linear-gradient(135deg, #00bcd4, #008c9e); /* по-тъмен неонов ефект */
-  color: #fff;
+  position: relative;
+  background-size: cover;
+  background-position: center;
   border-radius: 16px;
   padding: 2rem;
-  text-align: center;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #f8f9f9;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 300px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  overflow: hidden;
 }
 
-.hardware-tip-box:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+.hardware-tip-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45); /* dark overlay for text readability */
+  border-radius: 16px;
+  z-index: 0;
+}
+
+.hardware-tip-box h3,
+.hardware-tip-box p {
+  position: relative;
+  z-index: 1; /* above the overlay */
+  margin-bottom: 1rem;
 }
 
 .hardware-tip-box h3 {
-  font-size: 1.6rem;
-  margin-bottom: 1rem;
+  font-size: 1.8rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
 .hardware-tip-box p {
   font-size: 1.2rem;
   line-height: 1.6;
-  font-weight: bold;
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
-  .hardware-tips-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.hardware-tip-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
 }
-
-@media (max-width: 768px) {
-  .hardware-tips-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 
 /* ===== RESPONSIVE ===== */
 
