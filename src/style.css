@@ -489,7 +489,7 @@ header {
   height: 100%;
   object-fit: cover;
   display: block;
-  filter: brightness(0.95);
+  filter: brightness(0.6);
 }
 
 .cn-overlay-text {
