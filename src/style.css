@@ -265,6 +265,17 @@ header {
   font-size: 17px;
 }
 
+#home,
+#partners,
+#contact,
+#compt-network,
+#video-surveillance,
+#servers,
+#hardware-repair {
+  position: relative; /* This is the key fix */
+  overflow: hidden; /* Prevents internal absolute items from leaking out */
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   header {
@@ -797,7 +808,6 @@ header {
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin: 3rem;
-  
 }
 
 .hardware-tip-box {
