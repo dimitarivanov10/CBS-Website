@@ -12,6 +12,7 @@ body {
 header {
   background-color: #dedcd7;
   padding: 1.5rem 0.5rem;
+  z-index: 1000;
 }
 
 .navbar {
@@ -19,6 +20,7 @@ header {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  z-index: 1000;
 }
 
 .logo img {
@@ -52,7 +54,7 @@ header {
   color: #b12f31;
 }
 
-#hero-section > .image-wrapper,
+.hero-section > .image-wrapper,
 #video-surveillance > .image-wrapper {
   position: absolute;
   inset: 0;
@@ -69,7 +71,7 @@ header {
   filter: brightness(0.95);
 }
 
-#hero-section {
+.hero-section {
   margin-bottom: 1rem;
   margin-left: 1rem;
   margin-right: 1rem;
@@ -297,7 +299,7 @@ header {
     font-size: 1.1rem;
   }
 
-  #hero-section {
+  .hero-section {
     padding: 2rem 1rem;
     margin: 0.5rem;
     min-height: auto;
