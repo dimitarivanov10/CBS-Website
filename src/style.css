@@ -52,7 +52,7 @@ header {
   color: #b12f31;
 }
 
-#home-page > .image-wrapper,
+#hero-section > .image-wrapper,
 #video-surveillance > .image-wrapper {
   position: absolute;
   inset: 0;
@@ -69,7 +69,7 @@ header {
   filter: brightness(0.95);
 }
 
-#home-page {
+#hero-section {
   margin-bottom: 1rem;
   margin-left: 1rem;
   margin-right: 1rem;
@@ -297,7 +297,7 @@ header {
     font-size: 1.1rem;
   }
 
-  #home-page {
+  #hero-section {
     padding: 2rem 1rem;
     margin: 0.5rem;
     min-height: auto;
