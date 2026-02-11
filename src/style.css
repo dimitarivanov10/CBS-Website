@@ -775,55 +775,60 @@ header {
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
 }
 
-/* ===== RESPONSIVE ===== */
+/* mobile */
 
 @media (max-width: 768px) {
-  /* ---------- GLOBAL ---------- */
-
   body {
     overflow-x: hidden;
   }
 
   section {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
-  /* ---------- HEADER / NAV ---------- */
+  /* ---------- HEADER ---------- */
 
   header {
-    padding: 1rem 0.5rem;
+    padding: 0.8rem 1rem;
   }
 
   .navbar {
-    flex-direction: column; /* logo top, links below */
+    display: flex;
+    flex-direction: column; /* logo on top */
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.4rem; /* tight spacing */
+  }
+
+  .logo {
+    line-height: 0;
   }
 
   .logo img {
-    width: 250px;
-    height: 250px;
-    margin: 0;
+    width: 240px;
+    height: auto;
+    display: block;
   }
+
+  /* ---------- NAV LINKS ---------- */
 
   .nav-links {
     display: flex;
-    flex-direction: row; /* <-- FORCE ROW */
+    flex-direction: row; /* FORCE ROW */
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap; /* wrap if needed */
     gap: 1rem;
-    background: transparent; /* <-- REMOVE DARK BG */
-    position: static; /* reset old absolute */
+    flex-wrap: wrap;
+    position: static; /* remove absolute */
+    background: transparent; /* remove dark bg */
     padding: 0;
+    margin: 0;
   }
 
   .nav-links a {
     font-size: 0.95rem;
-    color: #595c5e; /* your original color */
+    color: #595c5e;
   }
-
   /* ---------- HERO SECTIONS ---------- */
 
   .hero-section,
@@ -858,30 +863,35 @@ header {
   /* ---------- MINI IMAGE CARDS ---------- */
 
   .mini-img-wrapper {
-    flex-direction: column;
-    gap: 1.2rem;
+    display: grid; /* switch from flex to grid */
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 1rem; /* spacing between boxes */
     padding: 1rem;
+    justify-items: center; /* center items in each cell */
   }
 
   .mini-img-card {
-    width: 100%;
-    height: 220px;
+    width: 100%; /* take full cell width */
+    height: 150px; /* smaller height for mobile */
   }
 
   .img-overlay-text {
-    font-size: 1.2rem;
+    font-size: 1rem; /* smaller overlay text */
   }
 
   /* ---------- PARTNERS ---------- */
 
   .partners-grid {
-    grid-template-columns: 1fr !important;
-    gap: 1.5rem;
+    display: grid; /* make it grid */
+    grid-template-columns: repeat(2, 1fr); /* 3 columns */
+    gap: 1rem; /* spacing */
+    justify-items: center; /* center each card */
+    width: 100%;
   }
 
   .partner-card {
-    width: 100%;
-    height: 180px;
+    width: 100%; /* fill the grid cell */
+    height: 150px; /* smaller for mobile */
   }
 
   /* ---------- CONTACTS ---------- */
