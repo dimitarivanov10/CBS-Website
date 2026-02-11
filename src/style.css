@@ -299,7 +299,6 @@ header {
     background-color: #1e293b;
     border-radius: 8px;
     padding: 1rem;
-    display: none; /* can toggle with JS if you want a burger menu */
     position: absolute;
     right: 1rem;
     top: 80px;
@@ -862,66 +861,224 @@ header {
 
 /* ===== RESPONSIVE ===== */
 
-@media (max-width: 1024px) {
-  .hardware-tips-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 per row on medium screens */
-  }
-}
-
 @media (max-width: 768px) {
-  .hardware-tips-grid {
-    grid-template-columns: 1fr; /* 1 per row on mobile */
-  }
-}
+  /* ---------- GLOBAL ---------- */
 
-@media (max-width: 900px) {
-  .servers-info-flex {
+  body {
+    overflow-x: hidden;
+  }
+
+  section {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  /* ---------- HEADER / NAV ---------- */
+
+  header {
+    padding: 1rem 0.5rem;
+  }
+
+  .navbar {
     flex-direction: column;
-    padding: 2.5rem 1.5rem;
-    gap: 2.5rem;
+    gap: 1rem;
   }
 
-  .servers-big-title {
-    font-size: 2.4rem;
+  .logo img {
+    width: 160px;
+    height: auto;
+    margin: 0;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+  }
+
+  /* ---------- HERO SECTIONS ---------- */
+
+  .hero-section,
+  #video-surveillance {
+    padding: 3rem 1rem;
+    margin: 0.5rem;
+    min-height: auto;
+  }
+
+  .overlay-text,
+  .cn-overlay-text {
+    padding: 1.2rem;
+  }
+
+  .home-page-title,
+  .cn-title,
+  .servers-big-title,
+  .timeline-title {
+    font-size: 1.8rem !important;
+    margin: 1rem 0;
     text-align: center;
   }
 
+  .home-page-subtitle,
+  .cn-subtitle,
   .servers-big-subtitle {
+    font-size: 1rem !important;
+    margin: 0 !important;
     text-align: center;
-    margin: 0 auto;
   }
-}
 
-/* Responsive for mobile */
-@media (max-width: 768px) {
+  /* ---------- MINI IMAGE CARDS ---------- */
+
+  .mini-img-wrapper {
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 1rem;
+  }
+
+  .mini-img-card {
+    width: 100%;
+    height: 220px;
+  }
+
+  .img-overlay-text {
+    font-size: 1.2rem;
+  }
+
+  /* ---------- PARTNERS ---------- */
+
+  .partners-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
+  }
+
+  .partner-card {
+    width: 100%;
+    height: 180px;
+  }
+
+  /* ---------- CONTACTS ---------- */
+
   .contacts-wrapper {
     flex-direction: column;
+    gap: 2rem;
     margin: 1rem;
   }
 
+  .map-container {
+    min-width: 0;
+  }
+
   .map-container iframe {
-    height: 300px;
+    height: 250px;
   }
-}
 
-/* Ultra-small devices */
-@media (max-width: 480px) {
-  .home-page-title {
-    font-size: 1.6rem;
+  .contact-info h3 {
+    font-size: 1.4rem;
   }
-  .home-page-subtitle {
-    font-size: 0.9rem;
-  }
-}
 
-@media (max-width: 1024px) {
-  .partners-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .contact-info p {
+    font-size: 1rem;
   }
-}
 
-@media (max-width: 600px) {
-  .partners-grid {
-    grid-template-columns: 1fr;
+  /* ---------- TIPS GRID (NETWORK) ---------- */
+
+  .tips-grid {
+    grid-template-columns: 1fr !important;
+    margin: 1rem;
+    gap: 1.2rem;
+  }
+
+  .tip-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.2rem;
+  }
+
+  .tip-icon {
+    margin: 0 auto;
+  }
+
+  /* ---------- VIDEO CARDS ---------- */
+
+  .video-card-flex {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .video-card-icon {
+    margin-bottom: 1rem;
+  }
+
+  .video-card-text {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  /* ---------- SERVERS ---------- */
+
+  .servers-info-flex {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 2rem;
+  }
+
+  .server-tip-box {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.2rem;
+  }
+
+  .server-tip-number {
+    margin: 0 auto 1rem auto;
+  }
+
+  .server-tip-box p {
+    font-size: 1rem;
+  }
+
+  /* ---------- HARDWARE GRID ---------- */
+
+  .hardware-tips-grid {
+    grid-template-columns: 1fr !important;
+    margin: 1rem;
+  }
+
+  .hardware-tip-box {
+    min-height: 220px;
+    padding: 1.5rem;
+  }
+
+  .hardware-tip-box h3 {
+    font-size: 1.2rem;
+  }
+
+  .hardware-tip-box p {
+    font-size: 0.95rem;
+  }
+
+  /* ---------- TIMELINE ---------- */
+
+  .timeline {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .timeline-dot {
+    display: none;
+  }
+
+  .timeline-content {
+    padding: 1rem;
+  }
+
+  .timeline-content h3,
+  .timeline-content p,
+  .timeline-date {
+    font-size: 0.95rem !important;
   }
 }
