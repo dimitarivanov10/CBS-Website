@@ -619,6 +619,7 @@ header {
   line-height: 1.6;
   text-align: left;
   text-shadow: 0.5px 0.5px 0.5px #0f172a;
+  font-weight: bold;
 }
 
 /* servers */
@@ -863,35 +864,35 @@ header {
   /* ---------- MINI IMAGE CARDS ---------- */
 
   .mini-img-wrapper {
-    display: grid; /* switch from flex to grid */
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
-    gap: 1rem; /* spacing between boxes */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
     padding: 1rem;
-    justify-items: center; /* center items in each cell */
+    justify-items: center;
   }
 
   .mini-img-card {
-    width: 100%; /* take full cell width */
-    height: 150px; /* smaller height for mobile */
+    width: 100%;
+    height: 150px;
   }
 
   .img-overlay-text {
-    font-size: 1rem; /* smaller overlay text */
+    font-size: 1rem;
   }
 
   /* ---------- PARTNERS ---------- */
 
   .partners-grid {
-    display: grid; /* make it grid */
-    grid-template-columns: repeat(2, 1fr); /* 3 columns */
-    gap: 1rem; /* spacing */
-    justify-items: center; /* center each card */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    justify-items: center;
     width: 100%;
   }
 
   .partner-card {
-    width: 100%; /* fill the grid cell */
-    height: 150px; /* smaller for mobile */
+    width: 100%;
+    height: 150px;
   }
 
   /* ---------- CONTACTS ---------- */
@@ -921,15 +922,18 @@ header {
   /* ---------- TIPS GRID (NETWORK) ---------- */
 
   .tips-grid {
-    grid-template-columns: 1fr !important;
-    margin: 1rem;
-    gap: 1.2rem;
+    display: grid; /* MAKE SURE THIS IS SET */
+    grid-template-columns: repeat(2, 1fr); /* 2 per row */
+    gap: 1rem;
+    justify-items: center; /* center items in each cell */
+    margin: 0 auto; /* optional, center whole grid */
   }
 
   .tip-card {
     flex-direction: column;
     text-align: center;
     padding: 1.2rem;
+    width: 100%; /* ensures cards fill their grid cell */
   }
 
   .tip-icon {
@@ -945,7 +949,7 @@ header {
   }
 
   .video-card-icon {
-    margin-bottom: 1rem;
+    margin-bottom: 0;
   }
 
   .video-card-text {
