@@ -880,24 +880,32 @@ header {
   }
 
   .navbar {
-    flex-direction: column;
-    gap: 1rem;
+    flex-direction: column; /* logo top, links below */
+    align-items: center;
+    gap: 0.5rem;
   }
 
   .logo img {
-    width: 160px;
+    width: 250px;
     height: auto;
     margin: 0;
   }
 
   .nav-links {
-    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row; /* <-- FORCE ROW */
     justify-content: center;
-    gap: 0.8rem;
+    align-items: center;
+    flex-wrap: wrap; /* wrap if needed */
+    gap: 1rem;
+    background: transparent; /* <-- REMOVE DARK BG */
+    position: static; /* reset old absolute */
+    padding: 0;
   }
 
   .nav-links a {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    color: #595c5e; /* your original color */
   }
 
   /* ---------- HERO SECTIONS ---------- */
