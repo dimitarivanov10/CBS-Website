@@ -24,16 +24,15 @@ header {
   z-index: 1000;
 }
 
-.logo{
+.logo {
   margin: 0;
   padding: 0;
 }
 
 .logo img {
-  height: 400px;
-  width: 400px;
-  margin-bottom: -7rem;
-  margin-top: -8rem;
+  width: 280px; /* big but controlled */
+  height: auto;
+  display: block;
 }
 
 .nav-links {
