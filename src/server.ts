@@ -29,10 +29,6 @@ app.get("/partners", (req, res) => {
   res.render("partners");
 });
 
-app.get("/about", (req, res) => {
-  res.render("about");
-});
-
 app.get("/computer_networks", (req, res) => {
   res.render("computer_networks");
 });
