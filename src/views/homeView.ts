@@ -23,18 +23,20 @@ export function homeView(): string {
       <div class="mini-img-wrapper">
         <div class="mini-img-card">
           
-        <a href="/computer_networks" data-link class="mini-img-card">
+          <a href="/computer_networks" data-link class="mini-img-card">
           <img src="./assets/comp_netw.png" alt="comp_net" class="mini-img" />
           <div class="img-overlay-text">Компютърни мрежи</div>
           </a>
 
         </div>
           
-        <a href="/video" data-link class="mini-img-card">
+        
         <div class="mini-img-card">
-          <img src="./assets/sec_cam.png" alt="security_cam" class="mini-img" />
+        <a href="/video" data-link class="mini-img-card">  
+        <img src="./assets/sec_cam.png" alt="security_cam" class="mini-img" />
           <div class="img-overlay-text">Видеонаблюдение</div>
         </a>
+
         </div>
         <div class="mini-img-card">
        
