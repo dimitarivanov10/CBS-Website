@@ -1,14 +1,24 @@
-export type Route = "home" | "about" | "partners" | "contact";
+import {homeView} from "./views/homeView.ts";
+import {computerNetworksView} from "./views/computerNetworksView.ts";
+import {aboutView} from "./views/aboutView.ts";
+import {hardwareRepairView} from "./views/computerNetworksView.ts";
+import {partnersView} from "./views/partnersView.ts";
+import {serversView} from "./views/serversView.ts";
+import {videoView} from "./views/videoView.ts";
 
-export function getCurrentRoute(): Route{
-    const hash = window.location.hash.replace("#", "");
+const routes: Record<string, ()=> string> = {
+    "/": homeView,
+    "/about": aboutView,
+    "/partners": partnersView,
+    "/computer_networks": computerNetworksView,
+    "/servers": serversView,
+    "/video": videoView,
+    "/hardware_repair": hardwareRepairView
+};
 
-    if(hash === "home" ||
-        hash === "about" ||
-        hash === "partners" ||
-        hash === "contact"
-    ) {
-        return hash as Route;
-    }
-    return "home";
+export function router(){
+    const path = window.location.pathname;
+    const view = routes[path] || homeView;
+
+    document.getElementById("app")!.innerHTML = view();
 }
