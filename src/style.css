@@ -222,7 +222,7 @@ header {
   top: 5px;
   width: 16px;
   height: 16px;
-  background: #b92616; /* blue accent */
+  background: #b92616;
   border-radius: 50%;
   border: 2px solid white;
   box-shadow: 0 0 0 2px #b92616;
@@ -281,8 +281,8 @@ header {
 #video-surveillance,
 #servers,
 #hardware-repair {
-  position: relative; /* This is the key fix */
-  overflow: hidden; /* Prevents internal absolute items from leaking out */
+  position: relative;
+  overflow: hidden;
 }
 
 /* partners */
@@ -374,7 +374,7 @@ header {
   justify-content: center;
   align-items: flex-start;
   gap: 3rem;
-  margin: 2rem 5rem; /* margin from left/right */
+  margin: 2rem 5rem;
 }
 
 .map-container {
@@ -513,7 +513,7 @@ header {
 .cn-bg-video {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* behaves like your images */
+  object-fit: cover;
   display: block;
   filter: brightness(0.7);
 }
@@ -553,17 +553,17 @@ header {
 /* Video surveillance cards wrapper */
 #video-surveillance .video-cards-wrapper {
   display: flex;
-  flex-direction: column; /* stack vertically */
-  gap: 1.5rem; /* spacing between cards */
+  flex-direction: column;
+  gap: 1.5rem;
   width: 100%;
-  max-width: 95vw; /* same as overlay text */
-  margin: 2rem auto 0 auto; /* top margin + center horizontally */
+  max-width: 95vw;
+  margin: 2rem auto 0 auto;
   z-index: 2;
 }
 
 /* Individual cards */
 .video-card {
-  background: rgba(255, 255, 255, 0.15); /* glass effect */
+  background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-radius: 12px;
@@ -586,7 +586,7 @@ header {
 .video-card-flex {
   display: flex;
   align-items: flex-start;
-  gap: 1.5rem; /* tabulation space */
+  gap: 1.5rem;
   padding: 1.5rem 2rem;
 
   background: rgba(255, 255, 255, 0.15);
@@ -624,8 +624,6 @@ header {
 
 /* servers */
 
-/* ===== SERVERS SECTION (MATCHING SITE VIBE) ===== */
-
 .servers-info-flex {
   display: flex;
   gap: 4rem;
@@ -642,7 +640,7 @@ header {
 }
 
 .servers-big-title {
-  font-size: 3.5rem; /* same scale as home / cn titles */
+  font-size: 3.5rem;
   font-weight: 700;
   color: #2d2f30;
   text-transform: uppercase;
@@ -748,7 +746,7 @@ header {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45); /* dark overlay for text readability */
+  background: rgba(0, 0, 0, 0.45);
   border-radius: 16px;
   z-index: 0;
 }
@@ -756,7 +754,7 @@ header {
 .hardware-tip-box h3,
 .hardware-tip-box p {
   position: relative;
-  z-index: 1; /* above the overlay */
+  z-index: 1;
   margin-bottom: 1rem;
 }
 
@@ -775,6 +773,8 @@ header {
   transform: translateY(-6px);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
 }
+
+/* footer */
 
 .footer {
   background-color: #dedcd7;
@@ -849,9 +849,9 @@ header {
 
   .navbar {
     display: flex;
-    flex-direction: column; /* logo on top */
+    flex-direction: column;
     align-items: center;
-    gap: 0.4rem; /* tight spacing */
+    gap: 0.4rem;
   }
 
   .logo {
@@ -868,13 +868,13 @@ header {
 
   .nav-links {
     display: flex;
-    flex-direction: row; /* FORCE ROW */
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 1rem;
     flex-wrap: wrap;
-    position: static; /* remove absolute */
-    background: transparent; /* remove dark bg */
+    position: static;
+    background: transparent;
     padding: 0;
     margin: 0;
   }
@@ -975,18 +975,18 @@ header {
   /* ---------- TIPS GRID (NETWORK) ---------- */
 
   .tips-grid {
-    display: grid; /* MAKE SURE THIS IS SET */
-    grid-template-columns: repeat(2, 1fr); /* 2 per row */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
-    justify-items: center; /* center items in each cell */
-    margin: 0 auto; /* optional, center whole grid */
+    justify-items: center;
+    margin: 0 auto;
   }
 
   .tip-card {
     flex-direction: column;
     text-align: center;
     padding: 1.2rem;
-    width: 100%; /* ensures cards fill their grid cell */
+    width: 100%;
   }
 
   .tip-icon {
@@ -1071,5 +1071,64 @@ header {
   .timeline-content p,
   .timeline-date {
     font-size: 0.95rem !important;
+  }
+
+  .footer {
+    background-color: #dedcd7;
+    color: #5f6265;
+    padding: 30px 15px;
+    margin-top: 40px;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .footer-column {
+    width: 100%;
+  }
+
+  .footer-column h4 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+  }
+
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-column ul li {
+    margin-bottom: 6px;
+  }
+
+  .footer-column a {
+    color: #b12f31;
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+
+  .footer-column a:hover {
+    color: #5f6265;
+  }
+
+  .footer-logo {
+    width: 100px;
+    margin: 0 auto 10px auto;
+    display: block;
+  }
+
+  .footer-bottom {
+    border-top: 1px solid #c5c3be;
+    margin-top: 25px;
+    padding-top: 12px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #777;
   }
 }
