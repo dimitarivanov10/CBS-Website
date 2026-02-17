@@ -777,8 +777,8 @@ header {
 }
 
 .footer {
-  background-color: #111;
-  color: #fff;
+  background-color: #dedcd7;
+  color: #5f6265;
   padding: 50px 20px 20px;
   margin-top: 50px;
 }
@@ -806,7 +806,7 @@ header {
 }
 
 .footer-column a {
-  color: #ccc;
+  color: #b12f31;
   text-decoration: none;
   transition: 0.3s;
 }
