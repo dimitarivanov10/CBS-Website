@@ -57,3 +57,16 @@ const routes: Record<string, () => string> = {
   "/hardware_repair": hardwareRepairView,
 };
 ```
+
+---
+
+## Getting Started
+
+Follow the steps below to run the project locally.
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/your-repository-name.git
+cd your-repository-name
+```
