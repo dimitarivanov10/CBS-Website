@@ -42,9 +42,6 @@ export function computerNetworksView(): string {
             alt="Speed Icon"
             class="tip-icon"
           />
-          <div class="image-wrapper">
-            <img src="" alt="" />
-          </div>
           <p>
             Достатъчна ли е стандартна скорост, или ви трябва високоскоростна
             инфраструктура за по-големи натоварвания? Предпочитате ли кабелна
