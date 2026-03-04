@@ -1,4 +1,4 @@
-export default function contactView() {
+export function contactView() {
   return `
             <section id="contact">
       <h2 class="timeline-title">Свържете се с нас</h2>

@@ -5,7 +5,7 @@ import { hardwareRepairView } from "./views/hardwareRepairView.ts";
 import { partnersView } from "./views/partnersView.ts";
 import { serversView } from "./views/serversView.ts";
 import { videoView } from "./views/videoView.ts";
-import contactView from "./views/contactView.ts";
+import { contactView } from "./views/contactView.ts";
 
 const routes: Record<string, () => string> = {
   "/": homeView,
@@ -15,6 +15,7 @@ const routes: Record<string, () => string> = {
   "/servers": serversView,
   "/video": videoView,
   "/hardware_repair": hardwareRepairView,
+  "/contact": contactView,
 };
 
 export function router() {
@@ -26,8 +27,15 @@ export function router() {
   }
   if (path === "/contact") {
     appEl.innerHTML = `<div class="only-contact">${contactView()}</div>`;
+  } else {
+    const view = routes[path] || homeView;
+    appEl!.innerHTML = `
+            <div class="main-content">
+                ${view()}
+            </div>
+            <div class="persistent-contact">
+                ${contactView()}
+            </div>
+        `;
   }
-  const view = routes[path] || homeView;
-
-  document.getElementById("app")!.innerHTML = view();
 }
