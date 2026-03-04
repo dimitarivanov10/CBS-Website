@@ -7,7 +7,7 @@ import {serversView} from "./views/serversView.ts";
 import {videoView} from "./views/videoView.ts";
 
 const routes: Record<string, ()=> string> = {
-    "/": homeView,
+    "/": homeView, aboutView,
     "/about": aboutView,
     "/partners": partnersView,
     "/computer_networks": computerNetworksView,
