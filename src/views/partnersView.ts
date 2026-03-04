@@ -50,7 +50,7 @@ export function partnersView(): string {
         </div>
 
         <div class="partner-card">
-          <a href="#" target="_blank">
+          <a href="https://borsa-parvenec.com/" target="_blank">
             <img
               src="./assets/borsaPurvenec.jpg"
               alt="Borsa Purvenec"
